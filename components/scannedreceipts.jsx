@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createStyles, Table, ScrollArea, rem } from "@mantine/core";
+import axios from "axios";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -28,7 +29,23 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function Scannedreceipts({ data }) {
+export async function Scannedreceipts() {
+  async function getReceipt() {
+    try {
+      axios({
+        method: "get",
+        url: "https://localhost:3000/v1/receipt",
+      }).then(async (response) => {
+        return await response.data;
+      });
+    } catch (e) {
+      window.alert("error fetching");
+    }
+  }
+
+  const receiptRes = await getReceipt();
+  console.log(receiptRes);
+
   const { classes, cx } = useStyles();
   const [scrolled, setScrolled] = useState(false);
 
