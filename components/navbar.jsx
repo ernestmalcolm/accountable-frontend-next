@@ -28,6 +28,7 @@ import {
   IconCoin,
   IconChevronDown,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -178,9 +179,11 @@ export function NavBar() {
           </Group>
 
           <Group className={classes.hiddenMobile}>
-            <Button variant="default">Log in</Button>
+            <Button variant="default">
+              <Link href="/login">Log in</Link>
+            </Button>
             <Button variant="gradient" className="bg-teal">
-              Sign up
+              <Link href="/register">Sign up</Link>
             </Button>
           </Group>
 
