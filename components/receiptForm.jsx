@@ -41,6 +41,7 @@ export function ReceiptForm() {
           <input
             className="border border-teal text-teal text-sm rounded-lg ring-2 ring-teal focus:ring-lightteal focus:border-lightteal block w-full p-2.5"
             required
+            onChange={(event) => setReceiptNumber(event.target.value)}
           />
         </div>
 
@@ -51,6 +52,7 @@ export function ReceiptForm() {
           <input
             type="text"
             className="border border-teal text-teal text-sm rounded-lg ring-2 ring-teal focus:ring-lightteal focus:border-lightteal block w-full p-2.5"
+            onChange={(event) => setTIN(event.target.value)}
             required
           />
         </div>
@@ -62,6 +64,7 @@ export function ReceiptForm() {
           <input
             type="text"
             className="border border-teal text-teal text-sm rounded-lg ring-2 ring-teal focus:ring-lightteal focus:border-lightteal block w-full p-2.5"
+            onChange={(event) => setBuyerName(event.target.value)}
           />
         </div>
 
@@ -72,6 +75,7 @@ export function ReceiptForm() {
           <input
             type="number"
             className="border border-teal text-teal text-sm rounded-lg ring-2 ring-teal focus:ring-lightteal focus:border-lightteal block w-full p-2.5"
+            onChange={(event) => setAmount(event.target.value)}
           />
         </div>
 
@@ -82,6 +86,7 @@ export function ReceiptForm() {
           <input
             type="date"
             className="border border-teal text-teal text-sm rounded-lg ring-2 ring-teal focus:ring-lightteal focus:border-lightteal block w-full p-2.5"
+            onChange={(event) => setDate(event.target.value)}
           />
         </div>
 
@@ -92,6 +97,7 @@ export function ReceiptForm() {
           <textarea
             placeholder="groceries=100000"
             className="border border-teal text-teal text-sm rounded-lg ring-2 ring-teal focus:ring-lightteal focus:border-lightteal block w-full p-2.5"
+            onChange={(event) => setReceiptItem(event.target.value)}
           />
         </div>
 
