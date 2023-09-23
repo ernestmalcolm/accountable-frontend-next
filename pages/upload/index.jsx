@@ -16,10 +16,10 @@ export default function Home() {
         <div className="w-[70%] ">
           <DropZone />
         </div>
-        {/* <div className="max-w-7xl mx-auto pt-10 pb-10">
-          <p className="text-2xl underline pb-10">Enter the receipt manually</p>
-          <ReceiptForm />
-        </div> */}
+        <div className="max-w-7xl mx-auto pt-10 pb-10">
+          {/*<p className="text-2xl underline pb-10">Enter the receipt manually</p>*/}
+          {/*<ReceiptForm />*/}
+        </div>
       </main>
     </>
   );
